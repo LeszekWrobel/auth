@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-//Route::get('/kontakt', 'PagesController@index')->name('kontakt') ;
+Route::get('/kontakt', 'PagesController@index')->name('kontakt') ;
 
-Route::resource('kontakt','PagesController');
+
+//Route::resource('kontakt','PagesController');

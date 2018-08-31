@@ -19,7 +19,7 @@
                       	<h1>Pracownia Sukien Ślubnych: </h1>
                       	</article>
                       	<aside>
-                      	<big>CATHERINE</big> 31-216 Kraków  ul. Frycza Modrzewskiego 2   <br /> <br/>tel. 12 416 55 80<br />
+                      	<big>CATHERINE</big> 31-216 Kraków  ul. Frycza Modrzewskiego 2<br /> <br/>tel. 12 416 55 80<br />
                       	<a href="mailto:biuro@suknieslubne.net.pl" style="color:#FFFFFF">  biuro@suknieslubne.net.pl</a><br /><br />
                       	<!--<span style="color: red; "><b><big>Przerwa urlopowa<br /> 28.07 do 07.08.2018r</big></b></span><br /><br /> -->
                       	 <a href="https://maps.google.pl/maps?ie=UTF8&amp;cid=13018454242146076063&amp;q=CATHERINE+-+Suknie+%C5%9Alubne&amp;gl=PL&amp;hl=pl&amp;t=m&amp;ll=50.087148,19.946687&amp;spn=0.004819,0.009141&amp;z=16&amp;source=embed"
