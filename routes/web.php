@@ -21,5 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/kontakt', 'PagesController@index')->name('kontakt') ;
 
+Route::post('/kontakt/submit', 'MessagesController@submit')->name('submit') ;
+
 
 //Route::resource('kontakt','PagesController');

@@ -35,7 +35,7 @@ class CreateumowasTable extends Migration
             $table->integer('tel');
             $table->string('mail');
             $table->string('zdjecie');
-            $table->integer('iduzytkownicy');
+            $table->integer('iduzytkownicy')->nullable();
             $table->timestamps();
         });
     }

@@ -4,19 +4,23 @@
 <div class="container">
   <h1>Dodaj suknie</h1>
   <div class="row justify-content-center">
+    {!! Form::open(['url' => 'kontakt/submit']) !!}
+    @include ('inc.errors')
+     <div class="row">
       <div class="col-md-6">
-        {!! Form::open(['url' => 'kontakt/submit']) !!}
         <div class="form-group row">
           <div class="col-md-5">
             {{Form::label('date', 'Data')}}
           </div>
           <div class="col-md-5">
-            {{date("d,m,y")}}
+            {{date("Y-m-d")}}
+            {{Form::text('date', date("Y-m-d"),['class' => 'sr-only', ])}}
+            {{Form::text('ip', $_SERVER['REMOTE_ADDR'],['class' => 'sr-only', ])}}
           </div>
         </div>
         <div class="form-group row">
           <div class="col-md-5">
-            {{Form::label('nr', 'Nr umowy')}}
+            {{Form::label('nr', 'Nr umowy *')}}
           </div>
           <div class="col-md-5">
             {{Form::text('nr', '',['class' => 'form-control-sm', 'placeholder' => 'Nr umowy/'.date("y")])}}
@@ -24,7 +28,7 @@
         </div>
         <div class="form-group row">
           <div class="col-md-5">
-            {{Form::label('dataum', 'Data umowy')}}
+            {{Form::label('dataum', 'Data umowy *')}}
           </div>
           <div class="col-md-5">
             {{Form::date('dataum', \Carbon\Carbon::now(),['class' => 'form-control-sm'])}}
@@ -32,12 +36,15 @@
         </div>
         <div class="form-group row">
           <div class="col-md-5">
-            {{Form::label('cenaum', 'Cena z umowy')}}
+            {{Form::label('cenaum', 'Cena z umowy*')}}
           </div>
           <div class="col-md-5">
             {{Form::text('cenaum', '',['class' => 'form-control-sm', 'placeholder' => 'Cena z umowy'])}}
           </div>
         </div>
+        <!-- dodaje 25% ceny do ceny z umowy (cena w komisie)+$cenaum*25/100 -->
+        <!-- <?php // $cena=$cenaum; ?> -->
+        <!-- {{Form::text('cena', 'cenaum',['class' => '', ])}} -->
         <div class="form-group row">
           <div class="col-md-5">
             {{Form::label('nazwasukni', 'Nazwa sukni')}}
@@ -63,18 +70,18 @@
           </div>
         </div>
         <div class="form-group row">
-          <div class="col-md-2">
+          <div class="col-md-5">
             {{Form::label('opis', 'Opis')}}
           </div>
-          <div class="col-md-10">
-            {{Form::textarea('opis', '',['class' => 'form-control', 'placeholder' => 'Opis'])}}
+          <div class="col-md-5">
+            {{Form::textarea('opis', '',['class' => 'form-control-sm', 'placeholder' => 'Opis', 'rows' => '6', 'cols' => '20'])}}
           </div>
         </div>
       </div>
       <div class="col-md-6">
         <div class="form-group row">
           <div class="col-md-5">
-            {{Form::label('imie', 'Imię')}}
+            {{Form::label('imie', 'Imię *')}}
           </div>
           <div class="col-md-5">
             {{Form::text('imie', '',['class' => 'form-control-sm', 'placeholder' => 'Imię'])}}
@@ -98,7 +105,7 @@
         </div>
         <div class="form-group row">
           <div class="col-md-5">
-            {{Form::label('miasto', 'Miasto')}}
+            {{Form::label('miasto', 'Miasto *')}}
           </div>
           <div class="col-md-5">
             {{Form::text('miasto', '',['class' => 'form-control-sm', 'placeholder' => 'Miasto'])}}
@@ -130,23 +137,43 @@
         </div>
         <div class="form-group row">
           <div class="col-md-5">
-            {{Form::label('mail', 'E-Mail')}}
+            {{Form::label('mail', 'E-Mail *')}}
           </div>
           <div class="col-md-5">
-            {{Form::text('mail', '',['class' => 'form-control-sm', 'placeholder' => 'E-Mail'])}}
+            {{Form::email('mail', '',['class' => 'form-control-sm', 'placeholder' => 'E-Mail'])}}
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-5">
+            {{Form::label('zdjecie', 'Zdjęcie 0 lub 1')}}
+          </div>
+          <div class="col-md-5">
+            {{Form::text('zdjecie', '',['class' => 'form-control-sm', 'placeholder' => 'Zdjęcie 0 lub 1'])}}
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-5">
+            {{Form::label('iduzytkownicy', 'iduzytkownicy')}}
+          </div>
+          <div class="col-md-5">
+            {{Form::text('iduzytkownicy', '',['class' => 'form-control-sm', 'placeholder' => 'iduzytkownicy'])}}
           </div>
         </div>
 
-        <div class="form-group row">
-          <div class="col-md-5">
-            {{Form::submit('Zatwierdż',['class' => 'btn btn-primary'])}}
-          </div>
-          <div class="col-md-5">
-            {{Form::reset('Czyść',['class' => 'btn btn-primary'])}}
-          </div>
-        </div>
-        {!! Form::close() !!}
+
+          *  pola wymagane
       </div>
+
+  </div>
+  <div class="form-group row">
+    <div class="col-md-5">
+      {{Form::reset(' Czyść ',['class' => 'btn btn-primary btn-block'])}}
+    </div>
+    <div class="col-md-5">
+      {{Form::submit('Zatwierdż',['class' => 'btn btn-success btn-block'])}}
+    </div>
+  </div>
+      {!! Form::close() !!}
     </div>
     <table class="table table-hover">
       @foreach ($users as $user):
