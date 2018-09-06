@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
+//use App\User;
+use App\umowa;
 class PagesController extends Controller
 {
   public function __construct()
@@ -17,10 +18,13 @@ class PagesController extends Controller
      */
     public function index()
     {
-      $users = User::all();
-      return view('index',compact('users'));
+      // $users = User::all();
+      // return view('index',compact('users'));
+      //
+      // return view ('kontakt');
 
-      return view ('kontakt');
+      $umowas = umowa::all();
+      return view('index',compact('umowas'));
 
     }
 
@@ -87,6 +91,6 @@ class PagesController extends Controller
      */
     public function destroy($id)
     {
-        //
+       //return view('/kontakt');
     }
 }

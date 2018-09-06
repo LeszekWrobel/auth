@@ -19,9 +19,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/kontakt', 'PagesController@index')->name('kontakt') ;
+Route::get('/kontakt', 'PagesController@index')->name('kontakt');
 
-Route::post('/kontakt/submit', 'MessagesController@submit')->name('submit') ;
+Route::post('/kontakt/submit', 'MessagesController@submit')->name('submit');
 
+//Route::get('/kontakt', 'PagesController@destroy')->name('destroy') ;
 
 //Route::resource('kontakt','PagesController');
