@@ -5,12 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 //use App\User;
 use App\umowa;
+
 class PagesController extends Controller
 {
-  public function __construct()
-  {
-      $this->middleware('auth');
-  }
     /**
      * Display a listing of the resource.
      *
@@ -21,11 +18,7 @@ class PagesController extends Controller
       // $users = User::all();
       // return view('index',compact('users'));
       //
-      // return view ('kontakt');
-
-      $umowas = umowa::all();
-      return view('index',compact('umowas'));
-
+       return view ('kontakt');
     }
 
     /**
@@ -91,6 +84,6 @@ class PagesController extends Controller
      */
     public function destroy($id)
     {
-       //return view('/kontakt');
+      // return view('/kontakt');
     }
 }

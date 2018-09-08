@@ -19,10 +19,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/kontakt', 'PagesController@index')->name('kontakt');
+Route::get('/index', 'MessagesController@index')->name('index');
 
-Route::post('/kontakt/submit', 'MessagesController@submit')->name('submit');
+Route::get('/add', 'AddController@index')->name('add');
 
-//Route::get('/kontakt', 'PagesController@destroy')->name('destroy') ;
+Route::post('/add/submit', 'AddController@submit')->name('submit');
+
+Route::get('/kontakt', 'PagesController@index')->name('kantakt');
+
+//Route::get('/kontakt/destroy', 'PagesController@destroy')->name('destroy') ;
 
 //Route::resource('kontakt','PagesController');

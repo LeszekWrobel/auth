@@ -69,10 +69,10 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                        <a href="{{ url('/kontakt') }}">Dodaj Ogłoszenie</a>
+                        <a href="{{ url('/index') }}">CATHERINE</a>
+                        <a href="{{ url('/add') }}">Dodaj Ogłoszenie</a>
                     @else
-                        <a class="top-left " href="{{ url('/kontakt') }}">Kontakt</a>
+                        <a href="{{ url('/kontakt') }}">Kontakt</a>
                         <a href="{{ route('login') }}">Zaloguj</a>
                         <a href="{{ route('register') }}">Zarejestruj</a>
                     @endauth
@@ -85,18 +85,17 @@
                   <div class="container">
                     @include ('inc.errors')
                   </div>
-
-                    Laravel
+                      CATHERINE
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="http://www.suknieslubne.net.pl/pl/kolekcje/?kolekcja=cristal">Nowe Suknie Ślubne</a>
+                    <a href="http://www.suknieslubne.net.pl/">Szycie Na Miarę</a>
+                    <a href="http://www.catherine.net.pl/licytuj/">Aukcja Sukien Komisowych</a>
+                    <a href="http://www.suknieslubne.net.pl/pl/uslugi/">Usługi</a>
+                    <a href="http://www.suknieslubne.net.pl/pl/kontakt/">Kontakt</a>
                 </div>
             </div>
         </div>
-    </body>
+    </body>``
 </html>

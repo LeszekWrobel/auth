@@ -1,4 +1,4 @@
-<div class="row justify-content-center ">
+<div class="row ">
  <div class="col-md-6 pr-5">
    <div class="form-group row ">
      <div class="col-md-6">
