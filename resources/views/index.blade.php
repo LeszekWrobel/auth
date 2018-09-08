@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('menuwelcome')
+<a class="btn btn-outline-dark" href="{{ url('/add') }}">Dodaj Ogłoszenie</a>
+@endsection
+
 @section('content')
 <div class="container">
   <table class="table table-hover">

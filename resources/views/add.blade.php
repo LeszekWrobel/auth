@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-  <div class="row justify-content-center pl-3">
+  <div class="row justify-content-center pl-1">
     {!! Form::open(['url' => 'add/submit']) !!}
     <h3>Dodaj suknie :</h3>
     @include ('inc.errors')

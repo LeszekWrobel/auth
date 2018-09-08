@@ -66,19 +66,7 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/index') }}">CATHERINE</a>
-                        <a href="{{ url('/add') }}">Dodaj Ogłoszenie</a>
-                    @else
-                        <a href="{{ url('/kontakt') }}">Kontakt</a>
-                        <a href="{{ route('login') }}">Zaloguj</a>
-                        <a href="{{ route('register') }}">Zarejestruj</a>
-                    @endauth
-                </div>
-                    @endif
-
+            @include ('inc.menuwelcome')
             <div class="content">
                 <div class="title m-b-md">
 
