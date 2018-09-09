@@ -18,7 +18,11 @@ class PagesController extends Controller
       // $users = User::all();
       // return view('index',compact('users'));
       //
-       return view ('kontakt');
+      // $umowas = umowa::all();
+      //$umowas = umowa::orderBy('id','desc')->get();
+      $umowas = umowa::orderBy('id','desc')->paginate(5);
+        // {{$umowas->links}}
+      return view('index',compact('umowas'));
     }
 
     /**
@@ -61,7 +65,7 @@ class PagesController extends Controller
      */
     public function edit($id)
     {
-        //
+
     }
 
     /**
@@ -84,6 +88,8 @@ class PagesController extends Controller
      */
     public function destroy($id)
     {
-      // return view('/kontakt');
+
+      $umowa->delete();
+      return redirect(route('umowas.index'));
     }
 }

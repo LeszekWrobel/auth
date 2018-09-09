@@ -87,3 +87,26 @@
         </div>
     </body>``
 </html>
+
+@extends('layouts.app')
+
+@section('content')
+<div class="flex-center position-ref full-height">
+    @include ('inc.menuwelcome')
+    <div class="content">
+        <div class="title m-b-md">
+
+
+              CATHERINE
+        </div>
+
+        <div class="links">
+            <a href="http://www.suknieslubne.net.pl/pl/kolekcje/?kolekcja=cristal">Nowe Suknie Ślubne</a>
+            <a href="http://www.suknieslubne.net.pl/">Szycie Na Miarę</a>
+            <a href="http://www.catherine.net.pl/licytuj/">Aukcja Sukien Komisowych</a>
+            <a href="http://www.suknieslubne.net.pl/pl/uslugi/">Usługi</a>
+            <a href="http://www.suknieslubne.net.pl/pl/kontakt/">Kontakt</a>
+        </div>
+    </div>
+</div>
+@endsection

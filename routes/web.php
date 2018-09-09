@@ -21,6 +21,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/index', 'MessagesController@index')->name('index');
 
+// Route::edit('/index/edit', 'PagesController@edit')->name('edit');
+
+// Route::destroy('/index', 'PagesController@index')->name('index');
+
 Route::get('/add', 'AddController@index')->name('add');
 
 Route::post('/add/submit', 'AddController@submit')->name('submit');
@@ -30,3 +34,5 @@ Route::get('/kontakt', 'PagesController@index')->name('kantakt');
 //Route::get('/kontakt/destroy', 'PagesController@destroy')->name('destroy') ;
 
 //Route::resource('kontakt','PagesController');
+
+Route::resource('/index', 'PagesController');
